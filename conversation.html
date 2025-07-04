@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>کوله بار - مکالمات</title>
+    <link rel="icon" href="logo/koleh.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @font-face {
+            font-family: 'Vazirmatn';
+            font-weight: 400;
+            font-style: normal;
+            src: url('fonts/Vazirmatn-Regular.woff2') format('woff2');
+        }
+        @font-face {
+            font-family: 'Dana';
+            font-weight: 400;
+            font-style: normal;
+            src: url('fonts/DanaFaNum-DemiBold.woff2') format('woff2');
+        }
+        body {
+            font-family: 'Dana', sans-serif;
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-[#E2F4E2] flex flex-col items-center rtl text-right px-2" dir="rtl">
+    <!-- Header -->
+    <div class="w-full max-w-screen-lg px-4 py-3 bg-[#C0DEBE] flex items-center justify-between shadow-md mb-6 rounded-b-2xl sticky top-0 z-10">
+        <!-- Icon Buttons -->
+        <div class="flex items-center gap-4">
+            <button class="w-10 h-10 flex items-center justify-center" aria-label="settings">
+                <img src="images/setting.png" alt="icon" class="w-15 h-15" />
+            </button>
+            <button class="w-10 h-10 flex items-center justify-center rounded-xl shadow-md hover:scale-105 transition" aria-label="menu">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-orange-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </div>
+
+        <!-- Login + Lock Container -->
+        <div class="flex items-center gap-3">
+            <button class="bg-[#A7D7A8] hover:bg-[#5C9562] text-white px-5 py-2 rounded-xl shadow transition">
+                شروع مکالمه جدید
+            </button>
+            <a href="#" aria-label="koleh-bar">
+                <button class="w-10 h-10 flex items-center justify-center border border-[#8CC48E] rounded-xl shadow-sm">
+                  <img src="images/koleh.png" alt="icon" class="w-8 h-8" />
+                </button>
+            </a>
+        </div>
+    </div>
+
+    <!-- Flash Message (Example) -->
+    <div class="w-full max-w-screen-lg mx-auto mb-4 bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative hidden" role="alert">
+        <span class="block sm:inline">پیام نمونه</span>
+    </div>
+
+    <!-- Conversation List Container -->
+    <div class="w-full max-w-screen-lg mx-auto bg-white shadow-md rounded-2xl p-6 space-y-4">
+        <!-- Empty State -->
+        <div class="bg-[#F9A85D] text-white p-6 rounded-xl shadow">
+            <strong class="block mb-2">توجه:</strong>
+            <p>لطفاً ابتدا یک مکالمه ایجاد کنید.</p>
+        </div>
+
+        <!-- Conversation Items (Example) -->
+        <div class="flex items-center justify-between py-4 border-b last:border-none border-[#E0E0E0]">
+            <div>
+                <p class="text-[#384943] font-bold text-lg">
+                    مکالمه نمونه...
+                </p>
+                <small class="text-[#6B6B6B]">
+                    آخرین به‌روزرسانی: 2 ساعت پیش
+                </small>
+            </div>
+            
+            <div class="flex items-center gap-2">
+                <a href="#">
+                    <button class="bg-[#6FA972] hover:bg-[#5C9562] text-white px-4 py-2 rounded-xl shadow transition">
+                        مشاهده
+                    </button>
+                </a>
+                
+                <button class="bg-gray-300 hover:bg-gray-400 text-gray-800 px-4 py-2 rounded-xl shadow transition">
+                    حذف
+                </button>
+            </div>
+        </div>
+
+        <div class="flex items-center justify-between py-4 border-b last:border-none border-[#E0E0E0]">
+            <div>
+                <p class="text-[#384943] font-bold text-lg">
+                    برنامه ریزی سفر...
+                </p>
+                <small class="text-[#6B6B6B]">
+                    آخرین به‌روزرسانی: 1 روز پیش
+                </small>
+            </div>
+            
+            <div class="flex items-center gap-2">
+                <a href="#">
+                    <button class="bg-[#6FA972] hover:bg-[#5C9562] text-white px-4 py-2 rounded-xl shadow transition">
+                        مشاهده
+                    </button>
+                </a>
+                
+                <!-- Delete Confirmation State -->
+                <button class="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-xl shadow transition">
+                    تأیید حذف
+                </button>
+                <button class="bg-gray-500 hover:bg-gray-600 text-white px-4 py-2 rounded-xl shadow transition">
+                    انصراف
+                </button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
